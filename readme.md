@@ -1,21 +1,43 @@
-# Lumen PHP Framework
+# Chizmiz
+![Build Status](https://img.shields.io/badge/build-under--construction-yellowgreen.svg)
+![AUR](https://img.shields.io/aur/license/yaourt.svg)
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+Chizmiz is a simple api-based random dummy data generator for Persian language, aimed to be more practical than the conventional Lorem Ipsum things. 
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+It can provide you with lots of random Iranian names, email addresses, titles and texts with different length and words, etc.
 
-## Official Documentation
+## Documentation
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+Chizmiz is under production. A full api documentation will be published here. However, the final commands are going to be something like below:
 
-## Security Vulnerabilities
+#### Random Persian Names
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+For single names:
+
+```php
+~.com/a/girl-name
+~.com/a/boy-name
+~.com/a/last-name
+~.com/a/full-name
+~.com/a/full-last-name
+```
+
+For a number of names:
+
+```php
+~.com/10/girl-names
+~.com/12/boy-names
+~.com/25/last-names
+~.com/5/full-names
+~.com/100/full-last-names
+```
+
+This list will be continued for random texts, titles, email addresses, ip addresses, etc.
+
+## Privacy Vulnerabilities
+
+If you think some of Chizmiz futures violetes real people privacy because of accidental matchings of random strings, please open an issue and let me know what you think.
 
 ## License
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Chizmiz is open-sourced software licensed under the GPL.
