@@ -16,7 +16,7 @@ class OneController extends Controller
      */
     public function girlName()
     {
-        return $this->fileToArray('girl-names');
+        return $this->grabRandomItem('girl-names');
     }
 
 
@@ -26,7 +26,7 @@ class OneController extends Controller
      */
     public function boyName()
     {
-        return $this->fileToArray('boy-names');
+        return $this->grabRandomItem('boy-names');
     }
 
 
@@ -47,7 +47,7 @@ class OneController extends Controller
      */
     public function lastName()
     {
-        return $this->fileToArray('last-names');
+        return $this->grabRandomItem('last-names');
     }
 
 
@@ -82,17 +82,37 @@ class OneController extends Controller
 
 
 
+    public function title()
+    {
+        return $this->grabRandomItem('persian-titles');
+    }
+
+
+
     /**
      * @param $file_name
      *
      * @return string
+     */
+    private function grabRandomItem($file_name)
+    {
+        $array = $this->fileToArray($file_name);
+        return trim(array_random($array));
+    }
+
+
+
+    /**
+     * @param $file_name
+     *
+     * @return array
      */
     private function fileToArray($file_name)
     {
         $things = file_get_contents("../resources/things/$file_name.txt");
         $array  = array_filter(explode(static::NEW_LINE, $things));
 
-        return trim(array_random($array));
+        return $array;
     }
 
 
