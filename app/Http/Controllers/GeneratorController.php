@@ -6,7 +6,9 @@ use Illuminate\Support\Facades\DB;
 
 class GeneratorController extends Controller
 {
-
+    /**
+     *
+     */
     public function girlName()
     {
         $this->query('name_first', 2);
@@ -14,6 +16,9 @@ class GeneratorController extends Controller
 
 
 
+    /**
+     *
+     */
     public function boyName()
     {
         $this->query('name_first', 1);
@@ -21,6 +26,9 @@ class GeneratorController extends Controller
 
 
 
+    /**
+     *
+     */
     public function lastName()
     {
         $this->query('name_last', 2);
@@ -28,6 +36,10 @@ class GeneratorController extends Controller
 
 
 
+    /**
+     * @param $field_name
+     * @param $gender
+     */
     private function query($field_name, $gender)
     {
         $table = DB::table('users')
